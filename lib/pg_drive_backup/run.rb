@@ -12,7 +12,7 @@ module PgDriveBackup
 
       #system("ccrypt -k #{config.key_path} -e #{filename}.sql")
 
-      session = GoogleDrive::Session.from_service_account_key(config.credentials_path)
+      session = GoogleDrive::Session.from_config(config.credentials_path)
 
       if session.upload_from_file("#{filename}.sql")
         system("rm -r #{filename}.sql")
