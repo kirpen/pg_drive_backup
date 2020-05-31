@@ -4,7 +4,7 @@ module PgDriveBackup
 
     setting :credentials_path, 'config/drive.json'
 
-    setting :key_path, 'config/key.txt'
+    #setting :key_path, 'config/key.txt'
 
     setting :prefix, '-dump'
 
